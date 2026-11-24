@@ -1,4 +1,4 @@
-Triple20 Testversion 20261124-130
+Triple20 Testversion 20261124-131
 Testadresse: https://burkertmarkus-prog.github.io/triple20-test/
 Supabase: https://bskoltagzvoidekifyrz.supabase.co
 Produktivdaten technisch gesperrt

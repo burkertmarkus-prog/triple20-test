@@ -1,5 +1,5 @@
-const CACHE_VERSION='triple20-test-shell-20261124-130-isolated-password';
-const DATA_CACHE='triple20-test-data-20261124-130-isolated-password';
+const CACHE_VERSION='triple20-test-shell-20261124-131-isolated-password';
+const DATA_CACHE='triple20-test-data-20261124-131-isolated-password';
 const APP_SHELL=[
   './','./index.html','./styles.css','./test-storage.js','./data-schema.js','./cloud-partitions.js','./app-dialog.js','./double-ko.js','./tournament-engine.js','./stats-station.js','./dartvision-lab.js','./app.js','./pwa.js','./manifest.webmanifest','./brand-assets/tyroldarts-logo-white.png','./brand-assets/dca-social-share.png',
   './icons/triple20-icon-192.png','./icons/triple20-icon-512.png','./icons/apple-touch-icon.png','./icons/triple20-icon.svg',
