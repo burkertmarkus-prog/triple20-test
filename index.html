@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Dartclub Achensee – News, Turniere und Live-Ergebnisse</title>
+  <meta name="description" content="Die offizielle Vereinsseite des Dartclub Achensee mit News, Terminen, Live-Spielen, Ergebnissen und Ranglisten – powered by Triple20.">
+  <link rel="canonical" href="https://burkertmarkus-prog.github.io/triple20-test/">
+
+  <!-- Vorschau beim Teilen auf WhatsApp, Pinterest und anderen Plattformen -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_AT">
+  <meta property="og:site_name" content="Dartclub Achensee">
+  <meta property="og:url" content="https://burkertmarkus-prog.github.io/triple20-test/">
+  <meta property="og:title" content="Dartclub Achensee – News, Turniere und Live-Ergebnisse">
+  <meta property="og:description" content="Aktuelle Spiele, kommende Turniere, Ergebnisse und Vereinsleben des Dartclub Achensee auf einen Blick.">
+  <meta property="og:image" content="https://burkertmarkus-prog.github.io/triple20-test/brand-assets/dca-social-share.png">
+  <meta property="og:image:secure_url" content="https://burkertmarkus-prog.github.io/triple20-test/brand-assets/dca-social-share.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dartclub Achensee – offizielle Vereinsseite für News, Turniere und Ergebnisse">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dartclub Achensee – News, Turniere und Live-Ergebnisse">
+  <meta name="twitter:description" content="Aktuelle Spiele, kommende Turniere, Ergebnisse und Saisonwertungen des DCA Achensee auf einen Blick.">
+  <meta name="twitter:image" content="https://burkertmarkus-prog.github.io/triple20-test/brand-assets/dca-social-share.png">
+  <meta name="twitter:image:alt" content="Dartclub Achensee – offizielle Vereinsseite für News, Turniere und Ergebnisse">
+  <meta name="pinterest-rich-pin" content="true">
+  <meta name="theme-color" content="#0E6BFF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Triple20">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/triple20-icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "Dartclub Achensee",
+    "alternateName": "DCA Achensee",
+    "url": "https://burkertmarkus-prog.github.io/triple20-test/",
+    "sport": "Darts"
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css?v=20261124-130">
+</head>
+<body>
+  <div style="position:fixed;z-index:20000;top:0;left:50%;transform:translateX(-50%);padding:5px 14px;border-radius:0 0 10px 10px;background:#c83232;color:#fff;font:900 12px system-ui;letter-spacing:.08em">TESTVERSION · KEINE ECHTEN TURNIERDATEN</div>
+  <header id="siteHeader" class="hero public-site-header">
+    <div class="brand">
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+      <button id="brandHomeBtn" class="brand-home" type="button" aria-label="Zur Startseite des Dartclub Achensee">
+        <span class="public-brand-copy"><strong>Dartclub Achensee</strong><small>Offizielle Vereinsseite</small></span>
+        <span class="internal-brand-copy"><img src="icons/triple20-icon-192.png" alt=""><strong>Triple<span>20</span></strong><small>Vereinsverwaltung · Dartclub Achensee</small></span>
+      </button>
+      <span class="powered-by">powered by <img src="icons/triple20-icon-192.png" alt="Triple20"></span>
+    </div>
+    <div class="main-actions" aria-label="Hauptnavigation">
+      <button id="showHomeBtn" class="ghost public-nav-action">Start</button>
+      <button id="showNewsBtn" class="ghost public-nav-action">News</button>
+      <button id="showEventsBtn" class="ghost public-nav-action">Termine</button>
+      <button id="showPublicLiveBtn" class="ghost public-nav-action">Live</button>
+      <button id="showSeasonBtn" class="ghost public-nav-action">Ergebnisse</button>
+      <button id="showRankingsBtn" class="ghost public-nav-action">Ranglisten</button>
+      <button id="showClubInfoBtn" class="ghost public-nav-action">Verein</button>
+      <button id="showDashboardBtn" class="ghost internal-nav-action hidden">Übersicht</button>
+      <button id="showTournamentBtn" class="ghost internal-nav-action hidden">Turnierleitung</button>
+      <button id="showClubDuelsBtn" class="ghost internal-nav-action hidden">Vereinsduelle</button>
+      <button id="showInternalSeasonBtn" class="ghost internal-nav-action hidden">Saison &amp; Ergebnisse</button>
+      <button id="showSettingsBtn" class="ghost internal-nav-action hidden">Einstellungen</button>
+      <button id="showLoginBtn" class="ghost account-action">Anmelden</button>
+    </div>
+  </header>
+  <div id="syncStatusBar" class="sync-status view-only"><span id="syncStatusText">Nur Ansicht</span><small id="syncLastSaved">Noch nicht synchronisiert</small></div>
+
+  <main>
+    <section id="publicHomeSection" class="public-home public-home-portal hidden" aria-labelledby="publicHomeTitle">
+      <div id="publicHomeStatus" class="public-home-status" role="status"></div>
+      <div class="public-home-lead">
+        <article id="publicFeatureStory" class="public-feature-story" aria-labelledby="publicHomeTitle"></article>
+        <aside class="public-next-panel" aria-labelledby="publicNextTitle">
+          <div class="public-portal-heading public-editable-heading"><div><span id="publicInfoEyebrow">TERMINE</span><h2 id="publicNextTitle">Als Nächstes</h2></div><button class="secondary public-home-edit hidden" type="button" data-home-editor="info">Bearbeiten</button></div>
+          <div id="publicNextEvents" class="public-next-events"></div>
+        </aside>
+      </div>
+      <section class="public-live-band" aria-labelledby="publicLiveTitle">
+        <div><span id="publicLivePulse" class="public-live-pulse" aria-hidden="true"></span><strong id="publicLiveTitle">Heute kein Turnier</strong><small id="publicLiveSummary">Sobald ein Turnier startet, erscheint es hier automatisch.</small></div>
+        <button class="secondary" type="button" data-public-nav="turnier">Spielplan öffnen</button>
+      </section>
+      <section id="publicLiveDetails" class="public-home-block public-live-details" aria-label="Laufende Spiele">
+        <div id="publicLiveGames" class="public-event-grid"></div>
+      </section>
+      <div class="public-home-content-grid">
+        <section class="public-home-block public-home-upcoming" aria-labelledby="publicUpcomingTitle">
+          <div class="public-portal-heading"><span>DEMNÄCHST</span><h2 id="publicUpcomingTitle">Kommende Turniere</h2></div>
+          <div id="publicUpcomingGames" class="public-event-list"></div>
+        </section>
+        <section class="public-home-block public-home-results" aria-labelledby="publicPastTitle">
+          <div class="public-portal-heading"><span>ERGEBNISSE</span><h2 id="publicPastTitle">Letzte Ergebnisse</h2></div>
+          <div id="publicPastGames" class="public-event-list"></div>
+        </section>
+        <section class="public-home-block public-home-rankings" aria-labelledby="publicSeasonsTitle">
+          <div class="public-portal-heading public-portal-heading-action"><div><span>WERTUNGEN</span><h2 id="publicSeasonsTitle">Liga &amp; Ranglisten</h2></div><button class="link-btn" type="button" data-public-nav="ergebnisse">Alle Ergebnisse</button></div>
+          <div id="publicSeasonRankings" class="public-ranking-grid"></div>
+        </section>
+        <aside id="tyrolDartsAd" class="tyroldarts-ad public-home-ad hidden" aria-label="Werbung von TyrolDarts">
+          <span class="tyroldarts-ad-label">Werbung</span>
+          <div class="tyroldarts-ad-brand"><small>PARTNER DES DCA</small><img src="brand-assets/tyroldarts-logo-white.png" alt="TyrolDarts"></div>
+          <div class="tyroldarts-ad-copy"><strong>Darts. Zubehör. Custom.</strong><span>Tiroler Wurzeln. Präzision bei jedem Wurf.</span></div>
+          <a class="tyroldarts-ad-action" href="https://tyroldarts.at/" target="_blank" rel="noopener sponsored">SHOP ENTDECKEN</a>
+        </aside>
+      </div>
+      <section class="public-club-intro" aria-label="Über den Dartclub Achensee">
+        <div><span class="eyebrow">DARTCLUB ACHENSEE</span><h2>Sport. Gemeinschaft. Good Darts.</h2><p>Turniere, Ergebnisse und Vereinsleben des DCA an einem Ort.</p></div>
+        <button class="secondary" type="button" data-public-nav="verein">Verein kennenlernen</button>
+      </section>
+    </section>
+
+    <section id="dashboardSection" class="internal-dashboard hidden" aria-labelledby="dashboardTitle">
+      <div class="internal-dashboard-heading">
+        <div><span>TRIPLE20 · VEREINSVERWALTUNG</span><h1 id="dashboardTitle">Guten Morgen, Turnierleitung</h1><p>Turniere, Mitglieder und die öffentliche DCA-Seite an einem Ort verwalten.</p></div>
+        <div class="internal-dashboard-heading-actions"><button id="dashboardMemberViewBtn" class="secondary" type="button">Mitgliederansicht</button><button id="dashboardPublicHomeBtn" class="secondary" type="button">← Zur öffentlichen DCA-Seite</button></div>
+      </div>
+      <div id="dashboardCards" class="internal-summary-grid"></div>
+      <div class="internal-dashboard-main">
+        <section class="internal-start-card">
+          <span>TURNIERLEITUNG</span><h2>Turnier starten</h2><p>Neuen Spieltag vorbereiten oder ein laufendes Turnier fortsetzen.</p>
+          <div><button type="button" class="primary" data-dashboard-tournament="men">HERREN STARTEN <b>→</b></button><button type="button" class="primary" data-dashboard-tournament="women">DAMEN STARTEN <b>→</b></button></div>
+        </section>
+        <aside class="internal-public-status">
+          <span>ÖFFENTLICHE STARTSEITE</span><h2>Online und aktuell</h2><p>News, Termine und Ergebnisse aus Sicht der Besucher prüfen.</p><button id="dashboardPreviewBtn" class="primary" type="button">STARTSEITE ANSEHEN <b>↗</b></button>
+        </aside>
+      </div>
+      <div id="dashboardPanel" class="internal-dashboard-panel"></div>
+    </section>
+
+    <section id="memberPreviewSection" class="member-preview-section hidden" aria-labelledby="memberPreviewTitle">
+      <div class="member-preview-toolbar"><div><span>VORSCHAU · NUR ANSICHT</span><h1 id="memberPreviewTitle">So sehen Mitglieder ihr Konto</h1><p>Diese Vorschau zeigt Aufbau und Inhalte, ohne die Rolle oder Daten eines Mitglieds zu verändern.</p></div><button id="memberPreviewBackBtn" class="secondary" type="button">← Zur Verwaltung</button></div>
+      <div id="memberPreviewPanel" class="cloud-panel card slim-card"></div>
+    </section>
+
+    <section id="clubInfoSection" class="public-club-page hidden" aria-labelledby="clubInfoTitle">
+      <div id="clubInfoContent"></div>
+    </section>
+
+    <section id="tvSection" class="tv-section hidden" aria-labelledby="tvTitle">
+      <header class="tv-header">
+        <div><p>TRIPLE20 · LIVE</p><h1 id="tvTitle">Turnierübersicht</h1><small id="tvUpdatedAt">Warte auf aktuelle Turnierdaten …</small></div>
+        <div class="tv-header-actions"><button id="tvRefreshBtn" type="button">Aktualisieren</button><button id="tvFullscreenBtn" type="button">Vollbild</button></div>
+      </header>
+      <div id="tvCompetitions" class="tv-competitions" aria-live="polite"></div>
+      <footer class="tv-footer"><span id="tvFooterMessage">Offene Paarungen der aktuellen Runde</span><strong>Good darts!</strong></footer>
+    </section>
+
+    <section id="playerProfileSection" class="public-player-profile hidden" aria-labelledby="playerProfileTitle">
+      <div id="playerProfileContent"></div>
+    </section>
+
+    <section id="authSection" class="settings-section hidden">
+      <div class="section-title"><div><h2>Konto</h2><p>Mein Profil und persönliche Einstellungen</p></div></div>
+      <div id="cloudAdminPanel" class="cloud-panel card slim-card"></div>
+    </section>
+
+    <section id="dartVisionLabSection" class="dartvision-lab hidden" aria-labelledby="dartVisionLabTitle">
+      <div class="section-title dartvision-lab-title"><div><span class="eyebrow">NICHT ÖFFENTLICH · NUR LOKAL</span><h2 id="dartVisionLabTitle">DartVision-Labor</h2><p>Manuelles Zählsystem als sichere Grundlage für die spätere Kamera-Auswertung.</p></div><button id="closeDartVisionLabBtn" class="secondary" type="button">Zurück zum Konto</button></div>
+      <div class="dartvision-local-warning"><strong>Abgeschotteter Testbereich</strong><span>Diese Daten bleiben nur auf diesem Gerät. Sie werden weder zu Supabase hochgeladen noch in Turniere oder Saisonwertungen übernommen.</span></div>
+      <div id="dartVisionLabContent"></div>
+    </section>
+
+    <section id="settingsSection" class="settings-section hidden">
+      <div class="section-title"><div><h2>Einstellungen</h2><p>Turnierstandards, Saison/Verein und Design</p></div></div>
+      <form id="settingsForm" class="card slim-card">
+        <input id="settingsMode" type="hidden" value="club">
+        <h3>Turniere</h3>
+        <div class="grid">
+          <label>Standard-Spielmodus<select id="settingsDefaultMode"><option value="swiss">Schweizer System</option><option value="roundrobin">Jeder gegen jeden</option><option value="doublesmix">Doppel-Mix · Einzelwertung</option><option value="doubleslottery">Doppel-Lotterie · Einzelwertung</option><option value="knockout">K.-o.-Turnier</option><option value="double">Doppel-K.-o.-Turnier</option></select></label>
+          <label>Standard-Turnierformat<select id="settingsDefaultFormat"><option value="single">Einzel</option><option value="group-finals">Gruppen + Finalrunde</option></select></label>
+          <label>Standard-Legmodus<select id="settingsDefaultLegs"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        </div>
+        <div class="club-settings-block">
+          <h3>Verein</h3>
+          <div class="grid">
+            <label>Vereinsname<input id="settingsClubName" placeholder="Name deines Vereins"></label>
+            <label>Logo optional<input id="settingsClubLogo" placeholder="Bild-URL oder leer lassen"></label>
+            <label>Vereinsfarbe<input id="settingsClubColor" type="color" value="#0E6BFF"></label>
+            <label>Saisonmodus<select id="settingsSeasonMode"><option value="halfyear">Halbjahr</option><option value="year">Jahr</option><option value="custom">Benutzerdefiniert</option></select></label>
+          </div>
+          <h3>Punktesystem</h3>
+          <p class="view-note">Ein Freilos ist kein gespieltes Match und kein echter Sieg. Für die Punkteberechnung zählt der automatische Aufstieg jedoch wie ein Wertungssieg.</p>
+          <div class="point-grid">
+            <label>5 Wertungssiege<input id="points5" type="number" min="0"></label>
+            <label>4 Wertungssiege<input id="points4" type="number" min="0"></label>
+            <label>3 Wertungssiege<input id="points3" type="number" min="0"></label>
+            <label>2 Wertungssiege<input id="points2" type="number" min="0"></label>
+            <label>1 Wertungssieg<input id="points1" type="number" min="0"></label>
+            <label>0 Wertungssiege<input id="points0" type="number" min="0"></label>
+          </div>
+        </div>
+        <h3>Design</h3>
+        <div class="theme-mode-grid">
+          <label>Farbmodus<select id="themeMode"><option value="light">Hell & freundlich</option><option value="classic">Triple20 Blau</option><option value="midnight">Mitternacht</option><option value="steel">Stahlgrau</option><option value="warm">Warmup</option></select></label>
+          <div id="themePreview" class="theme-preview"></div>
+        </div>
+        <section id="homePageSettings" class="home-page-settings">
+          <div class="home-editor-heading"><span class="eyebrow">ÖFFENTLICHE STARTSEITE</span><h3>News &amp; Infokachel</h3><p>Die DCA-News können ein eigenes Hintergrundfoto erhalten. Die rechte Kachel zeigt entweder automatisch kommende Turniere oder frei eingetragene Hinweise wie Öffnungszeiten.</p></div>
+          <div class="home-editor-grid">
+            <article id="homeNewsEditor" class="home-editor-card">
+              <div class="home-news-editor-head"><h4>DCA-News-Slider</h4><button id="addHomeNewsItemBtn" class="secondary" type="button">+ Neue News</button></div>
+              <div id="homeNewsItemTabs" class="home-news-item-tabs" aria-label="News auswählen"></div>
+              <div class="grid">
+                <label>Kleine Überschrift<input id="homeNewsEyebrow" maxlength="30" placeholder="DCA NEWS"></label>
+                <label>Hauptüberschrift optional<input id="homeNewsTitle" maxlength="80" placeholder="Leer = automatisch"></label>
+              </div>
+              <label>Text optional<textarea id="homeNewsText" rows="3" maxlength="240" placeholder="Leer = automatisch"></textarea></label>
+              <div id="homeNewsProfiles" class="home-news-profiles hidden"><span>Profile in dieser News</span><div class="grid"><label>Profil links<select id="homeNewsProfile1"></select></label><label>Profil rechts<select id="homeNewsProfile2"></select></label></div><small>Ohne Auswahl wird stattdessen das DCA-Signet angezeigt.</small></div>
+              <div class="grid"><label>Bildplatzierung<select id="homeNewsImageLayout"><option value="right">Motiv rechts</option><option value="full">Vollflächig</option></select></label><label>Vertikaler Ausschnitt<select id="homeNewsImagePosition"><option value="center">Mittig</option><option value="top">Oben</option><option value="bottom">Unten</option></select></label></div>
+              <div id="homeNewsImagePreview" class="home-news-image-preview"><span>Noch kein Hintergrundbild</span></div>
+              <div class="home-image-actions"><label class="secondary">Hintergrundbild auswählen<input id="homeNewsImageInput" type="file" accept="image/jpeg,image/png,image/webp,.heic,.heif"></label><button id="removeHomeNewsImageBtn" class="danger hidden" type="button">Bild entfernen</button><button id="deleteHomeNewsItemBtn" class="danger hidden" type="button">News löschen</button></div>
+              <small>Ab zwei Beiträgen wechselt die Startseite automatisch alle 9 Sekunden. Das Bild wird automatisch verkleinert.</small>
+            </article>
+            <article id="homeInfoEditor" class="home-editor-card">
+              <h4>Rechte Infokachel</h4>
+              <div class="grid">
+                <label>Kleine Überschrift<input id="homeInfoEyebrow" maxlength="30" placeholder="AUF EINEN BLICK"></label>
+                <label>Titel<input id="homeInfoTitle" maxlength="60" placeholder="Nächste Termine"></label>
+              </div>
+              <label>Inhalt<select id="homeInfoMode"><option value="auto">Kommende Turniere automatisch</option><option value="custom">Eigene Hinweise anzeigen</option></select></label>
+              <label>Eigene Hinweise<textarea id="homeInfoItems" rows="5" maxlength="600" placeholder="Dienstag | ab 18:00 Uhr&#10;Freitag | Vereinsabend&#10;Dartlokal Buchau | Gäste willkommen"></textarea><small>Eine Zeile pro Eintrag. Titel und Zusatz mit | trennen.</small></label>
+            </article>
+            <article id="clubInfoEditor" class="home-editor-card club-info-editor">
+              <h4>Öffentliche Vereinsseite</h4>
+              <div class="grid">
+                <label>Leitsatz<input id="clubInfoTagline" maxlength="100" placeholder="Sport. Gemeinschaft. Good Darts."></label>
+                <label>Vereinslokal<input id="clubInfoVenue" maxlength="100" placeholder="z. B. Dartlokal Buchau"></label>
+              </div>
+              <label>Kurzbeschreibung<textarea id="clubInfoDescription" rows="4" maxlength="600" placeholder="Wer wir sind und was unseren Verein ausmacht"></textarea></label>
+              <div class="grid"><label>Bildplatzierung<select id="clubInfoImageLayout"><option value="right">Motiv rechts</option><option value="full">Vollflächig</option></select></label><label>Vertikaler Ausschnitt<select id="clubInfoImagePosition"><option value="center">Mittig</option><option value="top">Oben</option><option value="bottom">Unten</option></select></label></div>
+              <div id="clubInfoImagePreview" class="home-news-image-preview"><span>Noch kein Hintergrundbild</span></div>
+              <div class="home-image-actions"><label class="secondary">Hintergrundbild auswählen<input id="clubInfoImageInput" type="file" accept="image/jpeg,image/png,image/webp,.heic,.heif"></label><button id="removeClubInfoImageBtn" class="danger hidden" type="button">Bild entfernen</button></div>
+              <small>Das Bild wird unabhängig vom DCA-News-Bild gespeichert und automatisch verkleinert.</small>
+              <div class="grid">
+                <label>Adresse<textarea id="clubInfoAddress" rows="3" maxlength="240" placeholder="Straße, PLZ Ort"></textarea></label>
+                <label>Öffnungszeiten<textarea id="clubInfoHours" rows="3" maxlength="300" placeholder="Dienstag | ab 18:00 Uhr&#10;Freitag | ab 18:00 Uhr"></textarea></label>
+                <label>Kontaktperson<input id="clubInfoContactName" maxlength="80"></label>
+                <label>E-Mail<input id="clubInfoEmail" type="email" maxlength="160"></label>
+                <label>Telefon<input id="clubInfoPhone" maxlength="40"></label>
+                <label>Karten-Link optional<input id="clubInfoMapsUrl" type="url" maxlength="500" placeholder="https://maps.google.com/…"></label>
+              </div>
+              <small>Leere Angaben werden auf der öffentlichen Seite nicht angezeigt.</small>
+            </article>
+          </div>
+        </section>
+        <button class="primary" type="submit">EINSTELLUNGEN SPEICHERN <span>→</span></button>
+      </form>
+    </section>
+
+    <section id="seasonSection" class="season-section hidden">
+      <div class="section-title"><div><h2>Ergebnisse</h2><p>Liga-Wertungen und eigenständige Turniere</p></div></div>
+      <nav class="results-type-switch" aria-label="Ergebnisbereich auswählen"><button class="active" type="button" data-results-view="leagues"><b>Liga-Wertungen</b><small>Ranglisten und Spieltage</small></button><button type="button" data-results-view="standalone"><b>Einzelturniere</b><small>Vereinsmeisterschaften und weitere Turniere</small></button></nav>
+      <div id="seasonLeagueResults">
+        <div class="season-toolbar card slim-card"><div id="seasonCurrentSummary" class="season-current-summary"></div><label>Wertung auswählen<select id="seasonSelect"></select></label><label class="admin-only-control">Verwalten<select id="seasonActionSelect"><option value="">Aktion wählen</option><option value="new">Neue Wertung erstellen</option><option value="edit">Wertung bearbeiten</option><option value="archive">Wertung archivieren</option><option value="delete">Wertung löschen</option></select></label></div>
+        <form id="seasonForm" class="card slim-card hidden"><h3 id="seasonFormTitle">Wertung erstellen / bearbeiten</h3><div class="grid"><label>Name<input id="seasonName" placeholder="Herbstliga 2026"></label><label>Bewerb<select id="seasonCompetition"><option value="men">Herren</option><option value="women">Damen</option><option value="open">Offen / gemischt</option></select><small>Diese Zuordnung steuert Teilnehmerauswahl und Rangliste – unabhängig vom Namen.</small></label><label>Startdatum<input id="seasonStart" type="date"></label><label>Enddatum<input id="seasonEnd" type="date"></label><label>Streichergebnisse<select id="seasonDrops"><option value="0">0 Streichergebnisse</option><option value="2">2 Streichergebnisse</option><option value="4">4 Streichergebnisse</option><option value="6">6 Streichergebnisse</option><option value="8">8 Streichergebnisse</option><option value="10">10 Streichergebnisse</option></select></label></div><button id="seasonFormSubmit" class="primary" type="submit">WERTUNG SPEICHERN <span>→</span></button></form>
+        <div class="tabs season-tabs"><button class="season-tab active" data-season-tab="standings">Rangliste</button><button class="season-tab" data-season-tab="tournaments">Spieltage</button><button class="season-tab" data-season-tab="stats">Statistiken</button><button class="season-tab" data-season-tab="honors">Ehrungen</button></div>
+        <div id="seasonStandings"></div><div id="seasonOverview" class="season-overview"></div><div id="seasonTournaments" class="hidden"></div><div id="seasonStats" class="hidden"></div><div id="seasonHonors" class="hidden"></div><div id="seasonPlayerDetail"></div>
+        <div class="export-actions"><button id="exportSeasonJsonBtn" class="secondary">Wertung als JSON exportieren</button><button id="exportStandingsCsvBtn" class="secondary">Rangliste als CSV exportieren</button></div>
+      </div>
+      <div id="seasonStandaloneResults" class="hidden"><div id="seasonStandalone"></div></div>
+    </section>
+
+    <section id="clubDuelsSection" class="club-duels-section hidden" aria-labelledby="clubDuelsTitle">
+      <div class="section-title club-duels-title"><div><span class="eyebrow">VEREIN GEGEN VEREIN</span><h2 id="clubDuelsTitle">Vereinsduelle</h2><p>TDSV-Steeldart oder frei vereinbartes Freundschaftsspiel</p></div><button id="newClubDuelBtn" class="primary hidden" type="button">NEUES DUELL <span>→</span></button></div>
+      <div id="clubDuelStatus" class="club-duel-status"></div>
+      <section id="clubDuelSetup" class="card slim-card hidden"></section>
+      <section id="clubDuelLive" class="hidden"></section>
+      <section class="club-duel-history-block"><div class="public-home-heading"><div><span>ARCHIV</span><h2>Gespeicherte Vereinsduelle</h2></div></div><div id="clubDuelHistory" class="club-duel-history"></div></section>
+    </section>
+
+    <section id="clubDuelTvSection" class="club-duel-tv hidden" aria-label="TV-Ansicht Vereinsduell">
+      <header><div><span>TRIPLE20 · VEREINSDUELL</span><h1 id="clubDuelTvTitle">Vereinsduell</h1><p id="clubDuelTvMeta"></p></div><button id="clubDuelTvFullscreenBtn" type="button">Vollbild</button></header>
+      <div id="clubDuelTvContent"></div>
+    </section>
+
+    <section id="statsStationSection" class="stats-station hidden" aria-labelledby="statsStationTitle">
+      <div class="stats-station-head">
+        <div><span class="eyebrow">TESTBETRIEB</span><h1 id="statsStationTitle">Autodarts-Statistikstation</h1><p>X01-Screenshot auswählen, erkannte Werte kontrollieren und direkt beim Spiel speichern. Cricket wird hier nicht ausgewertet.</p></div>
+        <button id="closeStatsStationBtn" class="secondary" type="button">Zurück zur Startseite</button>
+      </div>
+      <section class="card stats-station-card">
+        <div id="statsStationAuthorization" class="stats-station-authorization"></div>
+        <label>Laufende Paarung<select id="statsStationMatch"></select></label>
+        <label class="stats-station-upload">Autodarts-Screenshot auswählen<input id="statsStationFile" type="file" accept="image/png,image/jpeg,image/webp"></label>
+        <div id="statsStationStatus" class="view-note">Wähle zuerst ein laufendes X01-Spiel und anschließend den Screenshot aus.</div>
+        <div id="statsStationStored" class="stats-station-stored hidden"></div>
+      </section>
+      <section id="statsStationPreview" class="stats-station-preview hidden"></section>
+    </section>
+
+    <section id="tournamentManagementPanel" class="tournament-management-panel hidden" aria-label="Turnierleitung"></section>
+    <nav id="tournamentSubnav" class="tournament-subnav hidden" aria-label="Turnieransicht"></nav>
+    <nav id="competitionNav" class="competition-nav" aria-label="Bewerb auswählen"></nav>
+    <section id="memberLiveEmpty" class="card slim-card member-live-empty hidden"><h3>Derzeit läuft kein Vereinsturnier</h3><p>Sobald die Turnierleitung ein Turnier startet, kannst du hier den Spielplan und die Tabelle ansehen.</p></section>
+    <section class="setup card" id="setupSection">
+      <div class="section-title"><div><h2>Turnier einrichten</h2><p>Die wichtigsten Eckdaten</p></div></div>
+      <div class="tournament-actions"><button id="resetBtn" class="secondary" type="button">Neues Turnier</button><p>Offline spielbar: Einzelturniere bleiben lokal auf diesem Gerät und werden nicht automatisch in eine Saison übernommen.</p></div>
+      <div class="grid">
+        <label>Turniername<input id="tournamentName" value="Freitag-Abend-Cup" maxlength="50"></label>
+        <label>Spielmodus<select id="mode"><option value="roundrobin">Jeder gegen jeden</option><option value="swiss">Schweizer System</option><option value="doublesmix">Doppel-Mix · Einzelwertung</option><option value="doubleslottery">Doppel-Lotterie · Einzelwertung</option><option value="knockout">K.-o.-Turnier</option><option value="double">Doppel-K.-o.-Turnier</option></select></label>
+        <label id="legsField">Legs zum Sieg<select id="legs"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <label id="gameVariantField">Spielvariante<select id="startScore"><option value="501" selected>501</option><option value="301">301</option><option value="cricket">Cricket · nur Leg-Endstand</option></select></label>
+      </div>
+      <div id="cricketEntryHelp" class="cricket-entry-help hidden" role="note"><b>Keine Cricket-Zählung in Triple20</b><span>Marken auf 15–20 und Bull sowie Cricket-Punkte werden am Board oder in Autodarts gezählt. Hier wird nach dem Spiel ausschließlich der gewonnene Leg-Endstand eingetragen.</span></div>
+      <div id="tournamentStorageOptions" class="group-options"><label>Speicherung &amp; Wertung<select id="tournamentSeasonTarget"><option value="">Eigenständiges Turnier · ohne Wertung</option></select></label><p class="option-help">Die Zuordnung gilt für dieses Turnier und kann nach dem Start nicht mehr geändert werden. Bei einem angekündigten Termin wird die vorbereitete Wertung automatisch übernommen.</p></div>
+      <div id="groupOptions" class="group-options"><label>Anzahl Gruppen<select id="groupCount"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><label>Weiter pro Gruppe<select id="qualifiers"><option selected>1</option><option>2</option><option>3</option><option>4</option></select></label></div>
+      <div id="swissOptions" class="group-options hidden"><label>Anzahl Runden<select id="swissRounds"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><p class="option-help">Nach jeder abgeschlossenen Runde wird anhand der Tabelle neu gepaart. Gleiche Paarungen werden möglichst vermieden.</p></div>
+      <div id="doublesMixOptions" class="group-options hidden"><label>Anzahl Runden<select id="doublesMixRounds"><option>3</option><option>4</option><option>5</option><option selected>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label><p class="option-help">Jede Runde werden neue Zweierteams ausgelost. Partnerwiederholungen werden zuerst, Gegnerwiederholungen danach vermieden. Die Rangliste zählt jeden Spieler einzeln.</p></div>
+      <div id="doublesLotteryOptions" class="group-options hidden"><p class="option-help"><b>Feste Teams, drei Spiele:</b> 301 Double Out, 301 Double In/Double Out und Cricket. Triple20 erfasst bei Cricket nur den gewonnenen Leg-Endstand; Marken und Punkte werden am Board gezählt. Die Gegner wechseln, die Partner bleiben zusammen. Ist oben eine Turnierserie gewählt, werden frühere Partner global vermieden. Benötigt werden 4, 8, 12 … Teilnehmende; bei anderen Zahlen wären Einsätze oder Disziplinen ungleich verteilt. Verwende dafür „Doppel-Mix“.</p></div>
+      <details id="seedingOptions" class="seeding-options hidden">
+        <summary><span><b>Setzliste</b><small>Gesetzte Spieler möglichst weit auseinander platzieren</small></span></summary>
+        <div class="seeding-body">
+          <div class="seeding-toolbar">
+            <label>Saisonrangliste<select id="seedingSeason"></select></label>
+            <label>Anzahl gesetzter Spieler<select id="seedingCount"><option value="0">Keine</option><option value="4">Top 4</option><option value="8" selected>Top 8</option><option value="16">Top 16</option><option value="32">Top 32</option><option value="all">Gesamte Rangliste setzen</option></select></label>
+            <label>Ranglistenwertung<select id="seedingRankingMode"><option value="clean" selected>Nach Streicher</option><option value="total">Alle Ergebnisse</option></select></label>
+            <button id="loadSeasonSeeds" class="secondary" type="button">Rangliste übernehmen</button>
+          </div>
+          <div class="seeding-manual"><label>Spieler manuell setzen<select id="manualSeedPlayer"></select></label><button id="addManualSeed" class="secondary" type="button">Zur Setzliste</button></div>
+          <div id="seededPlayerList" class="seeded-player-list"></div>
+          <div class="draw-preview-head"><div><b>Vorschau der ersten Runde</b><small>Die übrigen Plätze werden zufällig ausgelost.</small></div><button id="rerollSeeding" class="secondary" type="button">Ungesetzte neu losen</button></div>
+          <div id="seedingPreview" class="seeding-preview"></div>
+        </div>
+      </details>
+      <div class="players-head"><div><h3>Spieler</h3><p id="playerCount">0 Spieler eingetragen</p></div></div>
+      <form id="playerForm" class="player-form"><select id="memberSuggestions" aria-label="Gespeichertes Mitglied auswählen"><option value="">Mitglied auswählen …</option></select><input id="playerName" placeholder="Oder neuen Spieler eingeben" maxlength="30" autocomplete="off"><button type="submit">+ Hinzufügen</button></form>
+      <div id="playerList" class="player-list"></div>
+      <button id="startBtn" class="primary" disabled>TURNIER STARTEN <span>→</span></button>
+    </section>
+
+    <section id="tournamentSection" class="hidden">
+      <div class="tournament-head"><div><p class="eyebrow" id="liveCompetitionLabel">LIVE-TURNIER</p><h2 id="liveTitle"></h2><p id="liveMeta"></p><p id="liveViewerStatus" class="live-viewer-status"></p><div class="live-tournament-actions"><details id="tournamentActionsMenu" class="tournament-actions-menu hidden"><summary>Turnier-Aktionen</summary><div><button id="openTvViewBtn" class="secondary hidden" type="button">TV-Ansicht öffnen</button><button id="openStatsStationBtn" class="secondary hidden" type="button">Statistikstation testen</button><button id="showLiveQrBtn" class="secondary hidden" type="button">QR-Code anzeigen</button><button id="renameEventBtn" class="secondary hidden" type="button">Spieltag umbenennen</button><button id="undoLastScoreBtn" class="secondary hidden" type="button">Letztes Ergebnis rückgängig</button><button id="endTournamentBtn" class="danger hidden" type="button">Turnier beenden</button></div></details></div></div><div class="progress-ring"><strong id="progressText">0%</strong><span>gespielt</span></div></div>
+      <div id="tvDisplayControls" class="tv-display-controls hidden"><strong>TV-Ansicht steuern</strong><span>Anzeige auf dem verbundenen Fernseher</span><div><button type="button" data-tv-display="matches">4 aktuelle Spiele</button><button type="button" data-tv-display="standings">Top 10</button><button type="button" data-tv-display="bracket">Turnierbaum</button><button type="button" data-tv-display="winners" class="hidden">Gewinnerrunde</button><button type="button" data-tv-display="losers" class="hidden">Verliererrunde</button><button type="button" data-tv-display="auto">Automatisch</button></div><section id="tvCompetitionPauseControls" class="tv-board-split hidden"><span>Automatische Boardverteilung</span><div><button type="button" data-tv-pause="men">Herren pausieren</button><button type="button" data-tv-pause="women">Damen pausieren</button></div></section><div id="tvBracketPageControls" class="tv-bracket-page-controls hidden"><button type="button" data-tv-page="-1">← Seite</button><strong id="tvBracketPageLabel">Seite 1/1</strong><button type="button" data-tv-page="1">Seite →</button></div><small id="tvDisplayHelp">Freie Boards werden automatisch mit spielbereiten Paarungen belegt.</small></div>
+      <div id="withdrawCard" class="withdraw-card hidden"></div>
+      <div class="tabs"><button class="tab active" data-tab="matches">Spielplan</button><button id="bracketTab" class="tab hidden" data-tab="bracket">Turnierbaum</button><button class="tab" data-tab="table">Tabelle</button></div>
+      <div id="matchesView"><div id="matchList" class="match-list"></div><section id="scoreHistoryCard" class="score-history-card hidden"></section></div>
+      <div id="bracketView" class="hidden"><div id="bracketGrid" class="bracket-board"></div></div>
+      <div id="tableView" class="hidden"><div class="table-wrap"><table><thead><tr><th>#</th><th>Spieler</th><th>Sp.</th><th>S</th><th>N</th><th>Legs</th><th>Pkt.</th></tr></thead><tbody id="standingsBody"></tbody></table></div></div>
+      <div id="qualificationCard" class="qualification hidden"><p>GRUPPENPHASE BEENDET</p><h2>Finalrunde starten</h2><div id="qualifiedPlayers"></div><div class="final-actions"><button data-finals="knockout">K.-O. STARTEN</button><button data-finals="double">DOPPEL-K.-O. STARTEN</button></div></div>
+      <div id="winnerCard" class="winner hidden"><span>🏆</span><p>TURNIERSIEGER</p><h2 id="winnerName"></h2><div id="seasonImportCard" class="season-import hidden"></div><button id="finishReset" class="primary">TURNIER BEENDEN</button></div>
+    </section>
+  </main>
+  <footer><span id="footerAppName">Triple20</span> · Lokal gespeichert · <span>Good darts!</span></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="data-schema.js?v=20261124-130"></script>
+  <script src="cloud-partitions.js?v=20261124-130"></script>
+  <script src="app-dialog.js?v=20261124-130"></script>
+  <script src="double-ko.js?v=20261124-130"></script>
+  <script src="tournament-engine.js?v=20261124-130"></script>
+  <script src="stats-station.js?v=20261124-130"></script>
+  <script src="dartvision-lab.js?v=20261124-130"></script>
+  <script src="app.js?v=20261124-130"></script>
+  <script src="pwa.js?v=20261124-130"></script>
+</body>
+</html>

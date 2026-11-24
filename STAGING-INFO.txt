@@ -1,0 +1,6 @@
+Triple20 Testversion 20261124-130
+Testadresse: https://burkertmarkus-prog.github.io/triple20-test/
+Supabase: https://bskoltagzvoidekifyrz.supabase.co
+Produktivdaten technisch gesperrt
+CNAME und Sitemap entfernt
+Cache-Namensraum: triple20-test-*
