@@ -3,11 +3,11 @@
 
 function emptyDartVisionBoard(){return{started:false,playerA:'Spieler 1',playerB:'Spieler 2',startScore:501,bestOf:3,scores:[501,501],legs:[0,0],activePlayer:0,winner:'',history:[],updatedAt:''}}
 function loadDartVisionLab(){
-  const parsed=safeJsonParse(localStorage.getItem(DARTVISION_LAB_KEY),{}),stored=parsed&&typeof parsed==='object'?parsed:{},boards={};
+  const parsed=safeJsonParse(window.T20BrowserStorage.getItem(DARTVISION_LAB_KEY),{}),stored=parsed&&typeof parsed==='object'?parsed:{},boards={};
   for(let number=1;number<=4;number++){const board=stored?.boards?.[number]||{};boards[number]={...emptyDartVisionBoard(),...board,scores:Array.isArray(board.scores)?board.scores:[board.startScore||501,board.startScore||501],legs:Array.isArray(board.legs)?board.legs:[0,0],history:Array.isArray(board.history)?board.history:[]}}
   return{version:1,activeBoard:Math.min(4,Math.max(1,+stored.activeBoard||1)),boards}
 }
-function saveDartVisionLab(){localStorage.setItem(DARTVISION_LAB_KEY,JSON.stringify(dartVisionLab))}
+function saveDartVisionLab(){window.T20BrowserStorage.setItem(DARTVISION_LAB_KEY,JSON.stringify(dartVisionLab))}
 function dartVisionBoard(){return dartVisionLab.boards[dartVisionLab.activeBoard]}
 function dartVisionLegsToWin(board=dartVisionBoard()){return Math.floor((+board.bestOf||3)/2)+1}
 function renderDartVisionLab(){
