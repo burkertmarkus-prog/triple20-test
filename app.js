@@ -148,13 +148,15 @@ function save({queueCloud=true}={}){
 }
 async function publishLiveTournament({notifyOnError=false,additionalKeys=[]}={}){
   if(!isAdmin()||!schemaWritesAllowed())return false;
-  if(!T20Cloud.client){if(notifyOnError)appAlert('Die Cloud-Verbindung ist noch nicht bereit. Bitte warte kurz und starte das Turnier anschließend erneut.');return false}
   // Die Boardbelegung wird gemeinsam mit jedem Ergebnis aktualisiert, aber in
   // einem getrennten Cloud-Bereich gespeichert. So kann eine TV-Umschaltung
   // niemals einen älteren Turnierstand zurückschreiben.
   syncActiveCompetition();writeDataDocument('dartTournament',state,{native:true});
   tvBoardAssignments(liveTvCompetitions());persistTvSettings({queueCloud:false});
-  const publishKeys=['dartTournament',TV_SETTINGS_KEY,...additionalKeys];await T20Cloud.syncAll({keys:publishKeys});
+  const publishKeys=['dartTournament',TV_SETTINGS_KEY,...additionalKeys];
+  publishKeys.forEach(key=>T20Cloud.pendingKeys.add(key));T20Cloud.persistPendingKeys();
+  if(T20Cloud.client&&navigator.onLine)await T20Cloud.syncAll({keys:publishKeys});
+  else setSyncStatus('Offline – sicher auf diesem Gerät gespeichert','offline');
   const published=publishKeys.every(key=>!T20Cloud.pendingKeys.has(key));
   if(!published&&notifyOnError)appAlert('Das Turnier wurde auf diesem PC gestartet, konnte aber nicht in die Cloud veröffentlicht werden. Bitte prüfe die Internetverbindung und den Statusbalken.');
   return published;
@@ -268,7 +270,7 @@ function openCloudConflictDialog({rows=[],conflictingKeys=[],lastSyncAt=''}={}){
   });
 }
 function applyLiveTournamentData(value){
-  if(!value)return;const current=T20DataSchema.toLogical('dartTournament',value);T20_SUPPRESS_SYNC=true;try{writeDataDocument('dartTournament',current)}finally{T20_SUPPRESS_SYNC=false}
+  if(!value||T20Cloud.pendingKeys.has('dartTournament'))return;const current=T20DataSchema.toLogical('dartTournament',value);T20_SUPPRESS_SYNC=true;try{writeDataDocument('dartTournament',current)}finally{T20_SUPPRESS_SYNC=false}
   Reflect.ownKeys(state).forEach(key=>delete state[key]);Object.assign(state,current);applyStoredTvSettings();ensureTournamentDayState();loadActiveCompetition();if(!$('#tvSection')?.classList.contains('hidden')){renderTvView();renderTvDisplayControls()}if(!$('#statsStationSection')?.classList.contains('hidden'))renderStatsStation(true);
 }
 function applyLiveTvSettings(value){if(!value)return;T20_SUPPRESS_SYNC=true;try{writeDataDocument(TV_SETTINGS_KEY,value,{native:true})}finally{T20_SUPPRESS_SYNC=false}applyStoredTvSettings();renderTvDisplayControls();if(!$('#tvSection')?.classList.contains('hidden'))renderTvView()}
@@ -894,11 +896,13 @@ window.T20Cloud={
   },
   async loadCloud({initial=false}={}){
     if(this.loadBusy)return;
+    if(!this.isAdmin&&this.pendingKeys.has('dartTournament')){setSyncStatus('Lokales Ergebnis wartet auf bestätigte Turnierberechtigung','offline');return}
     this.loadBusy=true;
     try{
       const previousCloudUpdated={...this.cloudUpdated},changes=!initial&&!this.pendingSync?await this.fetchCloudChanges():null;
       if(changes&&!changes.logicalKeys.length){this.lastSyncAt=new Date().toISOString();nativeSetItem('triple20_last_sync',this.lastSyncAt);setSyncStatus(this.user&&!this.isAdmin?'Angemeldet – Mitglied':this.user?'Online – aktuell':'Öffentliche Daten aktuell',this.user&&this.isAdmin?'online':'view-only');return}
       const rows=changes?changes.rows:await this.fetchCloud(),remoteChanged=new Set(changes?.logicalKeys||rows.filter(row=>previousCloudUpdated[row.data_key]&&row.updated_at&&row.updated_at!==previousCloudUpdated[row.data_key]).map(row=>T20CloudPartitions.logicalKeyForPhysical(row.data_key))),incoming=this.rowsToObject(rows),cloud=changes?{...(this.loadedCloudData||{}),...Object.fromEntries(changes.logicalKeys.map(key=>[key,incoming[key]]))}:incoming,hasCloud=Object.values(cloud).some(v=>v!==null&&v!==undefined);
+      if(!this.isAdmin&&this.pendingKeys.has('dartTournament')){setSyncStatus('Lokales Ergebnis wartet auf bestätigte Turnierberechtigung','offline');return}
       this.loadedCloudData=cloud;this.lastSyncAt=new Date().toISOString();window.T20BrowserStorage.setItem('triple20_last_sync',this.lastSyncAt);
       if(this.user&&!this.isAdmin){const selectedCompetition=state.activeCompetition||'men';this.liveTournamentState=structuredClone(cloud.dartTournament||{players:[],playerIds:{},playerProfileIds:{},started:false,matches:[],settings:{}});if(this.liveTournamentState.competitions?.[selectedCompetition])this.liveTournamentState.activeCompetition=selectedCompetition;applyTriple20Data({...cloud,dartTournament:this.liveTournamentState});setSyncStatus('Angemeldet – Mitglied','view-only');return}
       if(this.isAdmin&&this.pendingSync){
