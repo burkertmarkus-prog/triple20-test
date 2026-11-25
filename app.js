@@ -942,7 +942,9 @@ window.T20Cloud={
       return'handled';
     }
     if(choice!=='overwrite'){setSyncStatus('Konflikt offen – nichts überschrieben','conflict');return'handled'}
-    backupTriple20Data('triple20_vor_konflikt_ueberschreiben');return'overwrite';
+    try{nativeSetItem('triple20_conflict_upload_backup',JSON.stringify({createdAt:new Date().toISOString(),app:'Triple20',data:collectTriple20Data()}))}
+    catch(error){console.warn('Lokale Konfliktsicherung fehlgeschlagen',error);setSyncStatus('Sicherung fehlgeschlagen – nichts hochgeladen','conflict');return'handled'}
+    return'overwrite';
   },
   async writePartitionedDocument(logicalKey,value,rows,{force=false}={}){
     const split=T20CloudPartitions.partitionDocument(logicalKey,value);if(!split)return{status:'skipped',written:[]};
